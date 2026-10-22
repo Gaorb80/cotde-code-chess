@@ -83,6 +83,16 @@ int main() {
     cout << "h4 = " << h4 << ", h4 + 1 = " << h4 + 1 << " = " << nameOf(h4 + 1) << " (xuyen tuong)\n";
     cout << "a5 = " << a5 << ", a5 - 1 = " << a5 - 1 << " = " << nameOf(a5 - 1) << " (xuyen tuong)\n";
 
+    // Vòng lặp đếm (đoạn 28 trong video): đặt quân vào từng ô, ghi số ô nó đánh được lên ô đó
+    int power[64];
+    for (int sq = 0; sq < 64; sq++)
+        power[sq] = slide(sq, ROOK).size();
+    cout << "ban do xe: a1 = " << power[0] << ", d4 = " << power[toSquare(3, 3)] << ", h8 = " << power[63] << "\n";
+    int queenPower[64];                  // short "hậu ở góc yếu hơn hậu ở giữa"
+    for (int sq = 0; sq < 64; sq++)
+        queenPower[sq] = queen(sq).size();
+    cout << "ban do hau: a1 = " << queenPower[0] << ", d4 = " << queenPower[toSquare(3, 3)] << "\n";
+
     // Bản đồ sức mạnh: số ô đánh được trên bàn trống
     auto range = [](auto attacks) {
         size_t lo = 99, hi = 0;
