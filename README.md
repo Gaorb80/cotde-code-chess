@@ -2,8 +2,6 @@
 
 Code đi kèm series **Chess Code** của kênh **Cốt Đê**: mỗi video là một câu đố trên bàn cờ, mỗi lời giải là một khái niệm lập trình. Dùng tự do ([MIT](LICENSE)).
 
-Biên dịch mỗi bài: `g++ -O2 -std=c++20 <file>.cpp -o chay` (cần C++20 cho `std::popcount`).
-
 Quy ước dùng chung cho mọi bài: ô a1 = 0, h8 = 63, `sq = file + rank * 8` (giống thư viện `python-chess`). Tên biến tiếng Anh, chú thích tiếng Việt.
 
 | # | Bài | Khái niệm | Code | Video |
